@@ -1,12 +1,18 @@
+/* ===================================
+   GLOBAL RESET
+   =================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ===================================
+   BODY & PAGE LAYOUT
+   =================================== */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #f7f7f4;
+    background-color: #f7f7f4;  /* Warm off-white background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,72 +20,95 @@ body {
     padding: 20px;
 }
 
+/* ===================================
+   CARDS CONTAINER
+   =================================== */
+/* Flexbox wrapper for pricing cards */
 .cards-container {
     display: flex;
     flex-direction: row;
-    gap: 24px;
-    flex-wrap: nowrap;
+    gap: 24px;              /* Space between cards */
+    flex-wrap: nowrap;      /* Cards stay side-by-side */
     justify-content: center;
     align-items: flex-start;
 }
 
+/* ===================================
+   PRICING CARD
+   =================================== */
+/* Individual pricing card container */
 .card {
     display: flex;
     flex-direction: column;
     min-height: 380px;
-    background-color: #f2f1ed;
+    background-color: #f2f1ed;  /* Light beige card background */
     border-radius: 4px;
     padding: 16px;
     width: 320px;
-    flex-shrink: 0;
+    flex-shrink: 0;             /* Prevents card from shrinking */
 }
 
+/* Top section: Contains title, price, and features */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* ===================================
+   CARD HEADER: Title & Price
+   =================================== */
+/* Plan name (e.g., "Hobby", "Pro") */
 .card-title {
     font-size: 22px;
     line-height: 28px;
     font-weight: 400;
-    color: #26251e;
+    color: #26251e;         /* Dark charcoal text */
     margin-bottom: 8px;
 }
 
+/* Price container */
 .card-price {
     font-size: 20px;
-    color: rgba(38, 37, 30, 0.5);
+    color: rgba(38, 37, 30, 0.5);  /* Muted text at 50% opacity */
     display: inline-flex;
-    align-items: baseline;
+    align-items: baseline;          /* Aligns price and period */
 }
 
+/* Price amount (e.g., "$20" or "Free") */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Price period (e.g., "/mo.") */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* ===================================
+   CARD CONTENT: Features Section
+   =================================== */
+/* Features container with bottom margin */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* "Includes:" or "Everything in X, plus:" text */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Feature list container (removes default list styling) */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* Individual feature item */
 .features-list li {
     display: flex;
     align-items: center;
@@ -88,19 +117,24 @@ body {
     color: #26251e;
 }
 
+/* Checkmark icon (✓) before each feature */
 .checkmark {
     color: #26251e;
     font-size: 14px;
-    margin-right: 10px;
+    margin-right: 10px;     /* Space between checkmark and text */
     font-weight: 400;
 }
 
+/* ===================================
+   BUTTONS: CTA Styles
+   =================================== */
+/* Base button style (secondary variant) */
 .download-button {
-    margin-top: auto;
+    margin-top: auto;               /* Pushes button to card bottom */
     width: fit-content;
-    background-color: #e6e5e0;
+    background-color: #e6e5e0;      /* Light gray background */
     border: none;
-    border-radius: 999px;
+    border-radius: 999px;           /* Fully rounded pill shape */
     padding: 14px 24px;
     font-size: 16px;
     font-weight: 500;
@@ -109,32 +143,41 @@ body {
     transition: background-color 0.2s ease;
 }
 
+/* Secondary button: Hover state */
 .download-button:hover {
-    background-color: #D8D6CE;
+    background-color: #D8D6CE;      /* Slightly darker on hover */
 }
 
+/* Secondary button: Active/pressed state */
 .download-button:active {
     background-color: #D8D6CE;
 }
 
+/* Primary button variant (dark style) */
 .download-button.primary {
-    background-color: #111;
-    color: #fff;
+    background-color: #111;         /* Near-black background */
+    color: #fff;                    /* White text */
 }
 
+/* Primary button: Hover state */
 .download-button.primary:hover {
-    background-color: #333;
+    background-color: #333;         /* Lighter dark gray on hover */
 }
 
+/* Primary button: Active/pressed state */
 .download-button.primary:active {
     background-color: #333;
 }
 
+/* ===================================
+   PAGE LABEL: Version Indicator
+   =================================== */
+/* Fixed label at top center of page */
 .page-label {
     position: fixed;
     top: 16px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%);    /* Centers horizontally */
     font-size: 14px;
     color: #666;
     background: #fff;
@@ -143,6 +186,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Bold text within label */
 .page-label strong {
     color: #333;
 }

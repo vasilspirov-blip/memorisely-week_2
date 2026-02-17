@@ -4,22 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans — HTML version</title>
+    
+    <!-- Google Fonts: Optimizes font loading performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Inter font family (weights: 400, 500, 600, 700) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Page identifier label (fixed at top center) -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+    
+    <!-- Main container: Holds all pricing cards -->
     <div class="cards-container">
+        
+        <!-- Card 1: Hobby Plan (Free tier) -->
         <div class="card">
+            <!-- Card header and content area -->
             <div class="card-top">
+                <!-- Plan name -->
                 <h3 class="card-title">Hobby</h3>
+                
+                <!-- Pricing information -->
                 <p class="card-price">
                     <span class="card-price-amount">Free</span>
                 </p>
+                
+                <!-- Features section -->
                 <div class="card-content">
                     <p class="includes-text">Includes:</p>
+                    
+                    <!-- Feature list with checkmarks -->
                     <ul class="features-list">
                         <li>
                             <span class="checkmark">✓</span>
@@ -36,17 +55,29 @@
                     </ul>
                 </div>
             </div>
+            
+            <!-- CTA button: Secondary style (light background) -->
             <button class="download-button secondary">Download</button>
         </div>
+        
+        <!-- Card 2: Pro Plan (Paid tier) -->
         <div class="card">
+            <!-- Card header and content area -->
             <div class="card-top">
+                <!-- Plan name -->
                 <h3 class="card-title">Pro</h3>
+                
+                <!-- Pricing information with period -->
                 <p class="card-price">
                     <span class="card-price-amount">$20</span>
                     <span class="card-price-period">/mo.</span>
                 </p>
+                
+                <!-- Features section -->
                 <div class="card-content">
                     <p class="includes-text">Everything in Hobby, plus:</p>
+                    
+                    <!-- Feature list with checkmarks -->
                     <ul class="features-list">
                         <li>
                             <span class="checkmark">✓</span>
@@ -67,7 +98,57 @@
                     </ul>
                 </div>
             </div>
+            
+            <!-- CTA button: Primary style (dark background) -->
             <button class="download-button primary">Get Pro</button>
+        </div>
+        
+        <!-- Card 3: Enterprise Plan (Premium tier) -->
+        <!-- NEW CARD: Copy this entire <div class="card"> block to add more cards -->
+        <div class="card">
+            <!-- Card header and content area -->
+            <div class="card-top">
+                <!-- Plan name -->
+                <h3 class="card-title">Enterprise</h3>
+                
+                <!-- Pricing information with period -->
+                <p class="card-price">
+                    <span class="card-price-amount">$40</span>
+                    <span class="card-price-period">/mo.</span>
+                </p>
+                
+                <!-- Features section -->
+                <div class="card-content">
+                    <p class="includes-text">Everything in Pro, plus:</p>
+                    
+                    <!-- Feature list with checkmarks -->
+                    <ul class="features-list">
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Priority support
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Team collaboration tools
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Advanced security features
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Custom integrations
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Dedicated account manager
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- CTA button: Primary style (dark background) -->
+            <button class="download-button primary">Contact Sales</button>
         </div>
     </div>
 </body>
